@@ -1,0 +1,37 @@
+# Spring boot application
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echokube-deployment
+  labels:
+    app: echokube
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: echokube
+  template:
+    metadata:
+      labels:
+        app: echokube
+    spec:
+      containers:
+        - name: echokube
+          image: echokube
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echokube-service
+spec:
+  selector:
+    app: echokube
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30000

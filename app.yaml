@@ -1,0 +1,36 @@
+# Spring boot application
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echocube-deployment
+  labels:
+    app: echocube
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: echocube
+  template:
+    metadata:
+      labels:
+        app: echocube
+    spec:
+      containers:
+        - name: echocube
+          image: pocdemo887.azurecr.io/echocube:v1
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echocube-service
+spec:
+  selector:
+    app: echocube
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30000
