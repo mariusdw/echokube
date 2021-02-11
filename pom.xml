@@ -22,7 +22,7 @@
     <repositories>
         <repository>
             <id>poc_feed</id>
-            <url>https://pkgs.dev.azure.com/mariusdewit/poc/_packaging/poc_feed/maven/v1</url>
+            <url>https://pkgs.dev.azure.com/mariusdewit123/poc/_packaging/poc_feed/maven/v1</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -35,7 +35,7 @@
     <distributionManagement>
         <repository>
             <id>poc_feed</id>
-            <url>https://pkgs.dev.azure.com/mariusdewit/poc/_packaging/poc_feed/maven/v1</url>
+            <url>https://pkgs.dev.azure.com/mariusdewit123/poc/_packaging/poc_feed/maven/v1</url>
         </repository>
     </distributionManagement>
 
