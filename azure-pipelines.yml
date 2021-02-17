@@ -24,3 +24,12 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'deploy'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'poccontainerregistery'
+    repository: 'poc/echokube'
+    command: 'push'
+    tags: |
+      latest
+
