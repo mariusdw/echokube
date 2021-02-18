@@ -17,7 +17,6 @@
 
     <properties>
         <azure.resource-group>poc</azure.resource-group>
-        <docker.image.prefix>poccontainerregistery.azurecr.io</docker.image.prefix>
         <java.version>11</java.version>
         <jib-maven-plugin.version>2.4.0</jib-maven-plugin.version>
     </properties>
@@ -97,7 +96,7 @@
                         <image>openjdk:11</image>
                     </from>
                     <to>
-                        <image>${docker.image.prefix}/${azure.resource-group}/${project.artifactId}:latest</image>
+                        <image>${azure.resource-group}/${project.artifactId}:latest</image>
                     </to>
                     <container>
                         <mainClass>${groupId}.${artifactId}.EchokubeApplication</mainClass>
