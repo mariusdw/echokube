@@ -96,7 +96,7 @@
                         <image>openjdk:11</image>
                     </from>
                     <to>
-                        <image>${azure.resource-group}/${project.artifactId}:latest</image>
+                        <image>poccontainerregistery123.azurecr.io/${azure.resource-group}/${project.artifactId}:latest</image>
                     </to>
                     <container>
                         <mainClass>${groupId}.${artifactId}.EchokubeApplication</mainClass>
