@@ -31,5 +31,5 @@ steps:
     repository: 'poc/echokube'
     command: 'push'
     tags: |
-      "latest"
+      latest
 
