@@ -27,7 +27,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'poccontainerregistery123'
+    containerRegistry: 'pocServiceConnection'
     repository: 'poc/echokube'
     command: 'push'
     tags: |
