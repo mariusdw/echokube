@@ -28,8 +28,8 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'pocACRServiceConnection'
-    repository: 'poccontainerregistery.azurecr.io/poc/echokube'
+    repository: 'poc/echokube'
     command: 'push'
     tags: |
-      latest
+      "latest"
 
