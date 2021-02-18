@@ -97,7 +97,7 @@
                         <image>openjdk:11</image>
                     </from>
                     <to>
-                        <image>${docker.image.prefix}/${azure.resource-group}/${project.artifactId}:${version}</image>
+                        <image>${docker.image.prefix}/${azure.resource-group}/${project.artifactId}:latest</image>
                     </to>
                     <container>
                         <mainClass>${groupId}.${artifactId}.EchokubeApplication</mainClass>
