@@ -33,14 +33,8 @@ steps:
     tags: |
       latest
 
-- task: HelmDeploy@0
+- task: KubernetesManifest@0
   inputs:
-    command: 'package'
-    chartPath: 'echokube-helm'
-    chartVersion: '1.0.0'
-    destination: $(Build.ArtifactStagingDirectory)
-- task: HelmDeploy@0
-  inputs:
-    connectionType: 'Azure Resource Manager'
-    azureSubscription: 'Free Trial(6fc7be85-910a-44fa-9422-da138f2a5784)'
-
+    action: 'deploy'
+    kubernetesServiceConnection: 'pocAKSServiceConnection'
+    namespace: 'default'
